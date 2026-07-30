@@ -1,0 +1,80 @@
+import React from 'react';
+import {
+  Sun,
+  SunDim,
+  Moon,
+  MoonStar,
+  CloudSun,
+  CloudMoon,
+  Cloud,
+  CloudFog,
+  CloudDrizzle,
+  CloudRain,
+  CloudRainWind,
+  CloudHail,
+  CloudLightning,
+  Snowflake,
+  Umbrella,
+  Wind,
+  Zap,
+  Shirt,
+  Flame,
+  Smile,
+  Eye,
+  Activity,
+  Bike,
+  Utensils,
+  Sparkles,
+  Compass,
+  Droplets,
+  Thermometer,
+  Navigation,
+  Search,
+  MapPin,
+  RefreshCw,
+  LucideProps,
+} from 'lucide-react';
+
+const iconMap: Record<string, React.FC<LucideProps>> = {
+  Sun,
+  SunDim,
+  Moon,
+  MoonStar,
+  CloudSun,
+  CloudMoon,
+  Cloud,
+  CloudFog,
+  CloudDrizzle,
+  CloudRain,
+  CloudRainWind,
+  CloudHail,
+  CloudLightning,
+  Snowflake,
+  Umbrella,
+  Wind,
+  Zap,
+  Shirt,
+  Flame,
+  Smile,
+  Eye,
+  Activity,
+  Bike,
+  Utensils,
+  Sparkles,
+  Compass,
+  Droplets,
+  Thermometer,
+  Navigation,
+  Search,
+  MapPin,
+  RefreshCw,
+};
+
+interface WeatherIconProps extends LucideProps {
+  name: string;
+}
+
+export const WeatherIcon: React.FC<WeatherIconProps> = ({ name, ...props }) => {
+  const IconComponent = iconMap[name] || Cloud;
+  return <IconComponent {...props} />;
+};

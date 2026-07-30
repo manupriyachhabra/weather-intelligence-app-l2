@@ -1,0 +1,6 @@
+{
+  "name": "Weather Intelligence",
+  "description": "A modern, responsive weather forecast and intelligence web application with smart planning recommendations powered by Open-Meteo APIs.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
